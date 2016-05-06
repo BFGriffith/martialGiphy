@@ -19,13 +19,13 @@
       var martialGIFdiv = $('<div class="martialGiphy">');
 
       // create GIF
-      var image = $('<img>').attr("src", "(response.data[0].images[0].url)");
+      var image = $('<img>').attr("src", response.data[0].images.downsized_large.url);
 
       // appends GIF
       martialGIFdiv.append(image);
 
       // retrieves rating data
-      var rating = response.rating;
+      var rating = response.data[0].rating;
 
       // Creates an element to have the rating displayed
       var pRating = $('<p>').text("Rating= " + rating);
