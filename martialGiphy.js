@@ -4,6 +4,40 @@
   /* initial GIFbuttonArray */
   var martialGIFs = ['Toshiro Mifune', 'Bruce Lee', 'Jet Li', 'Tony Jaa', 'Michelle Yeoh', 'Zhang Ziyi', 'Shaw Brothers'];
 
+  function displayMartialGIF() {
+
+    var martialGIF = $(this).attr('data-name');
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + martialGIF + "&api_key=dc6zaTOxFJmzC";
+
+    // AJAX call
+    $.ajax({
+      url: queryURL,
+      method: 'GET'
+    }).done(function(response) {
+      console.log(response);
+      // new <div>
+      var martialGIFdiv = $('<div class="martialGiphy">');
+
+      // create GIF
+      var image = $('<img>').attr("src", "(response.data[0].images[0].url)");
+
+      // appends GIF
+      martialGIFdiv.append(image);
+
+      // retrieves rating data
+      var rating = response.rating;
+
+      // Creates an element to have the rating displayed
+      var pRating = $('<p>').text("Rating= " + rating);
+
+      // display rating
+      martialGIFdiv.append(pRating);
+
+      $('#martialGiphyView').prepend(martialGIFdiv);
+    });
+
+  }
+
   function renderButtons() {
     //prevents repeat buttons
     $('#buttonsView').empty();
@@ -17,11 +51,10 @@
   }
 
   $('#addMartialGIF').on('click', function() {
-
-    // This line of code will grab the input from the textbox
+    //grab the input from the textbox
     var martialGIF = $('#martialGIF_input').val().trim();
 
-    // The movie from the textbox is then added to our array
+    //martial-arts query from the textbox is added to the array
     martialGIFs.push(martialGIF);
 
     renderButtons();
@@ -30,8 +63,7 @@
     return false;
   })
 
-  // $(document).on('click', '.martialGIF', displayMartialGIF);
-
+  $(document).on('click', '.martialGIF', displayMartialGIF);
 
   renderButtons();
 
