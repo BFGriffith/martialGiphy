@@ -10,6 +10,7 @@
   <meta name="description" content="a martial-arts themed Giphy-API application, v0.0">
   <meta name="author" content="BFGriffith">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
   <link href="martialGiphy.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 </head>
@@ -22,7 +23,23 @@
       <div class="col-xs-10" id="content">
 
         <div class="row">
-
+          <div class="col-xs-12" id="buttonsContainer">
+            <!--rendered-buttons-->
+            <div id="buttonsView"></div>
+          </div><!--END-buttons-->
+          <div class="col-xs-6 col-xs-offset-6" id="searchFormContainer">
+            <form id="martialGIF_form">
+              <label for="martialGIF_input">&#10533;<span id="searchInstructions">search for the &#36947;</span>&#10534;</label><br><!--&#11024; &#11022;-->
+              <input type="text" id="martialGIF_input">
+              <br>
+              <!--searchButtonAdditionTrigger-->
+              <input id="addMartialGIF" type="submit" value="add a martialGIF">
+            </form>
+          </div>
+          <div class="col-xs-12" id="GiphyContainer">
+            <!--GIFs-->
+            <div id="martialGiphyView"></div>
+          </div>
         </div>
 
       </div><!--END-content-->
