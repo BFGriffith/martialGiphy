@@ -17,13 +17,13 @@
       console.log(response);
       // new <div>
       var martialGIFdiv = $('<div class="martialGiphy">');
-
+      var g;
+      for (g = 0; g < response.data.length; g++) {
       // create GIF
-      var image = $('<img>').attr("src", response.data[0].images.downsized_large.url);
-
+      var image = $('<img>').attr("src", response.data[g].images.downsized_large.url);
       // appends GIF
       martialGIFdiv.append(image);
-
+      };
       // retrieves rating data
       var rating = response.data[0].rating;
 
