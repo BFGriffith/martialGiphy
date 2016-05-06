@@ -2,7 +2,8 @@
   'use strict';
 
   /* initial GIFbuttonArray */
-  var martialGIFs = ['Toshiro Mifune', 'Bruce Lee', 'Jet Li', 'Tony Jaa', 'Michelle Yeoh', 'Zhang Ziyi', 'Shaw Brothers'];
+  var martialGIFs = ['Toshiro Mifune', 'Shaw Brothers', 'Bruce Lee', 'Jet Li', 'Tony Jaa', 'Michelle Yeoh', 'Zhang Ziyi', 'Donnie Yen', 'Jackie Chan', 'Jean-Claude Van Damme', 'Steven Seagal', 'Chuck Norris',
+  'Inigo Montoya', 'Last Samurai', 'Rob Roy', 'Blade', 'Deadpool', 'Jedi', 'Darth Vader', 'Darth Maul', 'Ninja Scroll', 'Last Airbender'];
 
   function displayMartialGIF() {
 
@@ -48,7 +49,7 @@
       a.text(martialGIFs[i]); //provide initial button text
       $('#buttonsView').append(a); //add the button to HTML
     }
-  }
+  };
 
   $('#addMartialGIF').on('click', function() {
     //grab the input from the textbox
@@ -61,7 +62,7 @@
 
     //so that users can hit "enter" instead of clicking on the button and it won't move to the next page
     return false;
-  })
+  });
 
   $(document).on('click', '.martialGIF', displayMartialGIF);
 
