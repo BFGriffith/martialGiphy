@@ -3,7 +3,7 @@
 
   /* initial GIFbuttonArray */
   var martialGIFs = ['Toshiro Mifune', 'Shaw Brothers', 'Bruce Lee', 'Jet Li', 'Tony Jaa', 'Michelle Yeoh', 'Zhang Ziyi', 'Donnie Yen', 'Jackie Chan', 'Jean-Claude Van Damme', 'Steven Seagal', 'Chuck Norris',
-  'Inigo Montoya', 'Last Samurai', 'Rob Roy', 'Blade', 'Deadpool', 'Jedi', 'Darth Vader', 'Darth Maul', 'Ninja Scroll', 'Last Airbender'];
+  'Inigo Montoya', 'Last Samurai', 'Blade', 'Deadpool', 'Jedi', 'Darth Vader', 'Darth Maul', 'Ninja Scroll', 'Last Airbender'];
 
   function displayMartialGIF() {
 
