@@ -24,7 +24,7 @@ button:active{
 #martialGiphyView {
   margin: 5px auto;
 }
-.martialGiphy img {
+.martialGiphy {
   height: auto;
   width: auto;
   display: inline-block;
@@ -43,24 +43,24 @@ button:active{
 /* EXTRA-small devices, phones */
 @media only screen and (min-width: 480px) {
   .martialGiphy img {
-    max-height: 400px;
-    width: 400px;
+    max-height: 225px;
+    width: 225px;
   }
 }
 
 /* SMALL devices, tablets */
 @media only screen and (min-width: 768px) {
   .martialGiphy img {
-    max-height: 350px;
-    width: 350px;
+    max-height: 300px;
+    width: 300px;
   }
 }
 
 /* MEDIUM devices, desktops */
 @media only screen and (min-width: 992px) {
   .martialGiphy img {
-    max-height: 500px;
-    width: 500px;
+    max-height: 300px;
+    width: 300px;
   }
 }
 
@@ -68,6 +68,6 @@ button:active{
 @media only screen and (min-width: 1200px) {
   .martialGiphy img {
     max-height: auto;
-    width: 600px;
+    width: 300px;
   }
 }
